@@ -2,6 +2,8 @@ package co.kr.steadysprinting.hellospring.service;
 
 import co.kr.steadysprinting.hellospring.domain.Member;
 import co.kr.steadysprinting.hellospring.repository.MemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,11 +18,13 @@ import java.util.Optional;
  MemberService 를 테스트 하기 위해서
  'MemberService' 에 커서를 두고, 단축키 : Commend + shift + t 하면, Create New Test 를 빠르고 손쉽게 생성할수 있다.
  */
+@Service
 public class MemberService {
 
     // 인터페이스 '객체이름' = new 클래스명()
     private final MemberRepository memberRepository;
 
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }

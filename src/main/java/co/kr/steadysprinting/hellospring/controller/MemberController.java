@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class MemberController {
 
+    // MemberService 는 여러개를 만들 필요가 없다.
     // MemberService 는 다른 Controller 에서도 공용으로 사용할수 있다.
     private final MemberService memberService;
 

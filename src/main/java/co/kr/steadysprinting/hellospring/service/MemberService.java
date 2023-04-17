@@ -18,6 +18,10 @@ import java.util.Optional;
  MemberService 를 테스트 하기 위해서
  'MemberService' 에 커서를 두고, 단축키 : Commend + shift + t 하면, Create New Test 를 빠르고 손쉽게 생성할수 있다.
  */
+
+// MemberService 는 순수한 자바 클래스 이다.
+// 스프링 컨테이너가 자동으로 인식할수 있는 방법이 없다.
+// 그래서 @Service 어노테이션을 이용하여 스프링 컨테이너가 알수 있게끔 한다.
 @Service
 public class MemberService {
 
